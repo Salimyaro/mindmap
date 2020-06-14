@@ -133,6 +133,14 @@ h6 {
   padding: 30px;
 }
 
+.section {
+  margin: 25px 0px 0px 0px;
+}
+
+.section:first-child {
+  margin: 0;
+}
+
 .main-mind {
   height: auto;
   text-align: center;
