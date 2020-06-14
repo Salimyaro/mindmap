@@ -91,6 +91,7 @@ h6 {
 .header-title {
   position: fixed;
   width: 100%;
+  min-height: 100px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -98,13 +99,27 @@ h6 {
 }
 
 .header-title__text {
-  padding: 25px 0px 35px 0px;
+  display: block;
+  position: relative;
+  margin-top: -100px;
+  padding: 10px 0px 35px 0px;
   color: #dceff8;
   font-family: 'Ubuntu Condensed', sans-serif;
   font-weight: 700;
   font-size: calc(24px + 16 * (100vw / 900));
   text-align: center;
   text-shadow: 2px 2px 12px #000000;
+}
+
+.book-wraper {
+  display: block;
+  max-width: 1170px;
+  padding: 5px 100px;
+  margin: 0 auto;
+}
+
+.book-wraper img {
+  height: 100px;
 }
 
 .container-image {
@@ -208,9 +223,40 @@ h4 {
   text-shadow: 2px 2px 6px #00000091;
 }
 
-@media (max-width: 479.98px) {
+@media (min-width: 479.98px) {
   .header-title__text {
-    padding: 16px 0 20px 0;
+    margin-top: -85px;
+  }
+}
+
+@media (min-width: 1170px) {
+  .header-title__text {
+    margin-top: -100px;
+  }
+}
+
+@media (max-width: 650px) {
+  .book-wraper {
+    padding: 5px 40px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .header-title {
+    min-height: 50px;
+  }
+
+  .header-title__text {
+    margin-top: -50px;
+    padding: 1px 0 20px 0;
+  }
+
+  .book-wraper {
+    padding: 5px 10px;
+  }
+
+  .book-wraper img {
+    height: 50px;
   }
 
   .content {
