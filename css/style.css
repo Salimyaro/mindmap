@@ -107,15 +107,23 @@ h6 {
   text-shadow: 2px 2px 12px #000000;
 }
 
-.container {
-  margin: 0 auto;
+.container-image {
+  position: fixed;
+  z-index: -10;
   width: 100%;
   height: 100%;
-  background-image: url(../img/man.png);
-  background-repeat: no-repeat;
-  background-position: 50% 25px;
-  background-attachment: fixed;
+  left: 50%;
+  top: 50%;
+}
+
+.image {
+  background-image: url("../img/man.png");
   background-size: cover;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .content {
@@ -221,4 +229,4 @@ h4 {
   }
 }
 
-.webp .container{ background-image: url(../img/man.webp); }
+.webp .image{ background-image: url(../img/man.webp); }
